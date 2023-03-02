@@ -1,6 +1,10 @@
 const hello = `hello at ${Date()}`
-
-async function cdc(){ 
+let cdc={}
+cdc.data = async(){ 
+    let url = `https://data.ny.gov/resource/5kgr-h5g5.json`
+    console.log(url)
+    let d = await (await fetch(url)).json()
+        return d
 }
 
 async function seer(){ 
